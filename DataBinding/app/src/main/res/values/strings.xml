@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">DataBinding</string>
+    <string name="click_me">Click me !!</string>
+    <string name="data_binding_done">Data Binding Done!</string>
+</resources>

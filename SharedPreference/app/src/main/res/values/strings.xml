@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SharedPreference</string>
+    <string name="login">Login</string>
+    <string name="logout">Logout</string>
+    <string name="hello_user">Hello User!</string>
+    <string name="deep_link_to_nnavigation_app">Deep Link to \nNavigation App</string>
+</resources>

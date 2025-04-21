@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">DogAPI2Recycler</string>
+    <string name="get_started">Get Started</string>
+    <string name="view_list">View List</string>
+    <string name="view_grid">View Grid</string>
+    <string name="button_for_grid">button for Grid</string>
+    <string name="button_for_list">Button for List</string>
+    <string name="dog_breeds">Dog Breeds</string>
+    <string name="dog_image">Dog Image</string>
+    <string name="name">Name</string>
+    <string name="breed_group">Breed Group</string>
+    <string name="life_span">Life Span</string>
+    <string name="dog_images">Dog Images</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="details">Details</string>
+    <string name="back_navigation_button">Back navigation button</string>
+    <string name="hello">Hello</string>
+    <string name="more_information">More Information:</string>
+    <string name="origin">Origin :</string>
+    <string name="Origin">Origin</string>
+    <string name="height">Height :</string>
+    <string name="Height">Height</string>
+    <string name="weight">Weight :</string>
+    <string name="Weight">Weight</string>
+    <string name="breed_for">Breed for :</string>
+    <string name="Breed_for">Breed for</string>
+    <string name="temperament">Temperament :</string>
+    <string name="Temperament">Temperament</string>
+    <string name="no_results_found">No Results Found</string>
+    <string name="mixed">Mixed</string>
+    <string name="https_cdn2_thedogapi_com_images">https://cdn2.thedogapi.com/images/</string>
+    <string name="dog">Dog</string>
+    <string name="Mixed">Mixed</string>
+    <string name="cattle_herding">Cattle Herding</string>
+    <string name="_10_years">10 years</string>
+    <string name="loyal_brave">Loyal, Brave</string>
+    <string name="united_kingdom">United Kingdom</string>
+    <string name="hjq8ge5v7">HJQ8ge5V7</string>
+</resources>

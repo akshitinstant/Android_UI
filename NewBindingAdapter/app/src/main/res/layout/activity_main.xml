@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity"
+    >
+
+    <data>
+        <variable
+            name="customVM"
+            type="com.example.newbindingadapter.CustomViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imgV"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            imageSrc="@{customVM.screenState.count}"
+            android:contentDescription="@string/dynamic_image"
+            app:layout_constraintBottom_toTopOf="@id/textV"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{String.valueOf(customVM.screenState.count)}"
+            app:layout_constraintBottom_toTopOf="@id/btnV"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgV" />
+
+        <Button
+            android:id="@+id/btnV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/increment"
+            android:textSize="20sp"
+            android:onClick="@{customVM::increment}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textV" />
+
+        <Button
+            android:id="@+id/btnv2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/decrement"
+            android:textSize="20sp"
+            android:onClick="@{customVM::decrement}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnV" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

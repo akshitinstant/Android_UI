@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">First_UI</string>
+    <string name="banner">banner</string>
+    <string name="home">home</string>
+    <string name="patient">patient</string>
+    <string name="expenses">expenses</string>
+    <string name="chat">chat</string>
+    <string name="categories">Categories:-</string>
+    <string name="current_affairs">Current Affairs</string>
+    <string name="science_quiz">Science Quiz</string>
+    <string name="technology">Technology</string>
+    <string name="general_knowledge">General Knowledge</string>
+    <string name="enter_text">Enter Text</string>
+    <string name="send">Send</string>
+    <string name="text">text</string>
+    <string name="text_block_1">Text Block 1</string>
+    <string name="text_block_2">Text Block 2</string>
+    <string name="Home">Home</string>
+    <string name="home_image">home_image</string>
+    <string name="Patient">Patient</string>
+    <string name="Expenses">Expenses</string>
+    <string name="chat_img">chat_img</string>
+    <string name="expensesimg">expensesimg</string>
+    <string name="patientimg">patientimg</string>
+    <string name="Chat">Chat</string>
+    <string name="Categories">Categories:-</string>
+    <string name="doctor">Doctor</string>
+    <string name="Science_quiz">Science Quiz</string>
+    <string name="Technology">Technology</string>
+    <string name="General_knowledge">General Knowledge</string>
+</resources>

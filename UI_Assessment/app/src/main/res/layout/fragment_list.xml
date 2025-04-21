@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".views.ListFrag"
+        android:background="#08021A"
+        android:padding="15dp">
+
+        <ImageView
+            android:id="@+id/frag2_back_arrow"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/back_arrow"
+            android:contentDescription="@string/back_button_from_fragment2" />
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/frag2_search_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/search_view"
+            app:layout_constraintTop_toBottomOf="@id/frag2_back_arrow"
+            app:iconifiedByDefault="false"
+            app:queryHint="@string/search_from_here"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/frag2_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/frag2_search_view" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

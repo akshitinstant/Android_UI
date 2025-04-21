@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">RecyclerView</string>
+    <string name="conatctimage">ConatctImage</string>
+    <string name="name">name</string>
+    <string name="add_contact">Add Contact</string>
+    <string name="number">Number</string>
+    <string name="update">Update</string>
+    <string name="Name">Name</string>
+    <string name="floating_action_button_to_add_item">Floating Action Button to add Item</string>
+</resources>

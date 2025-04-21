@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="quote"
+            type="com.example.databinding.Quote" />
+        
+        <variable
+            name="clickHandler"
+            type="com.example.databinding.MainActivity.ClickHandlingInnerClass" />
+    
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/textV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello World!"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/quoteText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{quote.text}"
+            app:layout_constraintTop_toBottomOf="@id/textV" />
+
+        <TextView
+            android:id="@+id/authorText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{quote.author}"
+            app:layout_constraintTop_toBottomOf="@id/quoteText" />
+
+
+        <Button
+            android:id="@+id/btnV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/click_me"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/enrollBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/click_me"
+            app:layout_constraintEnd_toStartOf="@id/cancelBtn"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/authorText"
+            android:onClick="@{clickHandler::onEnrollButtonClick}"/>
+
+        <Button
+            android:id="@+id/cancelBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/click_me"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/enrollBtn"
+            app:layout_constraintTop_toBottomOf="@id/authorText"
+            android:onClick="@{clickHandler::onCancelButtonClick}"/>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

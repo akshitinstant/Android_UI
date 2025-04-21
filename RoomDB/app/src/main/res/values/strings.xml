@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">RoomDB</string>
+    <string name="no_data_fetched">No Data Fetched!</string>
+    <string name="fetch_user_db">Fetch User DB</string>
+    <string name="fetch_subject_db">Fetch Subject DB</string>
+    <string name="multi_map">Multi Map</string>
+</resources>

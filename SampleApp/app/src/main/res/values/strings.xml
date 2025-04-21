@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">SampleApp</string>
+    <string name="hello_world">Hello World!</string>
+    <string name="fab">FAB</string>
+    <string name="enter_text">Enter Text</string>
+    <string name="aligned_button">Aligned Button</string>
+    <string name="ModifiedTextOnClick">"Text Modified on Click"</string>
+    <string name="submit">Submit</string>
+    <string name="submitted_value">Submitted value:</string>
+    <string name="button_0_n_shape">Button 0\n(shape)</string>
+    <string name="button_1">Button 1</string>
+    <string name="i_m_a_button_with_an_icon">I\'m a button with an icon</string>
+
+</resources>

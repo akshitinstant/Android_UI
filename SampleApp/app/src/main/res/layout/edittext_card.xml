@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/editCard"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="45sp"
+        android:hint="Text" />
+
+
+<!--    <Button-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Button 0\n(shape)"-->
+<!--        app:layout_constraintStart_toEndOf="@id/edit"-->
+<!--        app:layout_constraintBottom_toBottomOf="@id/edit"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        android:background="@drawable/shape1"-->
+<!--        android:backgroundTint="@android:color/transparent"/>-->
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/combutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_0_n_shape"
+        app:layout_constraintStart_toEndOf="@id/edit"
+        app:layout_constraintBottom_toBottomOf="@id/edit"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/white"
+        android:background="@drawable/select"/>
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="250dp"
+        android:layout_height="150dp"
+        app:layout_constraintTop_toBottomOf="@id/edit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:cardBackgroundColor="@android:color/darker_gray"
+        app:cardElevation="15dp"
+        app:cardCornerRadius="10dp"
+        />
+
+    <include android:id="@+id/include"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/activity_const"
+        app:layout_constraintTop_toBottomOf="@id/edit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

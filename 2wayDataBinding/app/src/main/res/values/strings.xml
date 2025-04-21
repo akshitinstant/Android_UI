@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">2wayDataBinding</string>
+    <string name="edit_text">Edit Text</string>
+</resources>

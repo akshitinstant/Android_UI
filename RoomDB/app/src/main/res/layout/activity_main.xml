@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp"
+        android:background="@android:color/holo_blue_bright"
+        tools:context=".view.MainActivity">
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/no_data_fetched"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:scrollbars="vertical"
+            app:layout_constraintBottom_toTopOf="@id/userBtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+<androidx.appcompat.widget.AppCompatButton
+    android:id="@+id/userBtn"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/fetch_user_db"
+    android:onClick="getUserData"
+    app:layout_constraintBottom_toTopOf="@id/subjectBtn"
+    />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/subjectBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fetch_subject_db"
+            android:onClick="getSubjectData"
+            app:layout_constraintBottom_toTopOf="@id/multiMapBtn"
+            />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/multiMapBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/multi_map"
+            android:onClick="getMultiMap"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
