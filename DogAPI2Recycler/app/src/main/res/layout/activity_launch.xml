@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+<variable
+    name="myVM"
+    type="com.example.dogapi2recycler.viewmodel.MyViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_theme"
+        tools:context=".view.LaunchActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/titleLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/guide"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poetsen_one_regular"
+                android:gravity="center"
+                android:text="@string/woof"
+                android:textColor="@color/white"
+                android:textSize="60sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/imgCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:cardCornerRadius="200dp">
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:contentDescription="@string/dog_image_launch"
+                    android:src="@drawable/dog_flower"
+                    />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/playwrite_variable"
+                android:gravity="center"
+                android:text="@string/perfect_pup_in_a_single_search"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/imgCard" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.4" />
+
+        <!--<ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/guide">
+
+
+        </ScrollView>-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/signupLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            android:background="@drawable/bg_auth_theme"
+            android:padding="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/guide">
+
+            <TextView
+                android:id="@+id/signup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/fredoka_variable_font"
+                android:text="@string/signup"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <EditText
+                android:id="@+id/nameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:autofillHints="emailAddress"
+                android:hint="@string/name"
+                android:layout_marginTop="20dp"
+                android:drawableStart="@drawable/person_ic"
+                android:drawablePadding="5dp"
+                android:background="@drawable/bg_edit_text"
+                android:inputType="textPersonName"
+                android:fontFamily="@font/fredoka_variable_font"
+                app:layout_constraintTop_toBottomOf="@id/signup" />
+
+            <EditText
+                android:id="@+id/emailEditTextS"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:autofillHints="emailAddress"
+                android:hint="@string/email"
+                android:layout_marginTop="20dp"
+                android:drawableStart="@drawable/mail_ic"
+                android:drawablePadding="5dp"
+                android:background="@drawable/bg_edit_text"
+                android:inputType="textEmailAddress"
+                android:fontFamily="@font/fredoka_variable_font"
+                app:layout_constraintTop_toBottomOf="@id/nameEditText" />
+
+            <EditText
+                android:id="@+id/passwordEditTextS"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="15dp"
+                android:autofillHints="password"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:fontFamily="@font/fredoka_variable_font"
+                android:background="@drawable/bg_edit_text"
+                android:drawableStart="@drawable/lock_ic"
+                android:drawablePadding="5dp"
+                app:layout_constraintTop_toBottomOf="@id/emailEditTextS" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/signupBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/signup"
+                android:textAllCaps="false"
+                android:onClick="registerUser"
+                android:textColor="@color/white"
+                android:fontFamily="@font/fredoka_variable_font"
+                android:background="@drawable/bg_btn_theme"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/passwordEditTextS"/>
+
+
+            <TextView
+                android:id="@+id/loginTxt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/already_have_an_account"
+                android:textColor="@color/white"
+                android:fontFamily="@font/fredoka_variable_font"
+                android:gravity="end"
+                android:layout_marginTop="15dp"
+                app:layout_constraintTop_toBottomOf="@id/signupBtn"
+                app:layout_constraintStart_toStartOf="@id/signupBtn"
+                app:layout_constraintEnd_toStartOf="@id/loginTxtBtn"
+                />
+            <TextView
+                android:id="@+id/loginTxtBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login"
+                android:fontFamily="@font/fredoka_variable_font"
+                android:textColor="@android:color/holo_blue_light"
+                android:background="@android:color/transparent"
+                android:onClick="toLogInPage"
+                app:layout_constraintStart_toEndOf="@id/loginTxt"
+                app:layout_constraintTop_toTopOf="@id/loginTxt"
+                app:layout_constraintEnd_toEndOf="@id/signupBtn"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/loginLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_auth_theme"
+            android:padding="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/guide">
+
+            <TextView
+                android:id="@+id/login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/fredoka_variable_font"
+                android:text="@string/login"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <EditText
+                android:id="@+id/emailEditText"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:autofillHints="emailAddress"
+                android:hint="@string/email"
+                android:layout_marginTop="20dp"
+                android:drawableStart="@drawable/mail_ic"
+                android:drawablePadding="5dp"
+                android:background="@drawable/bg_edit_text"
+                android:inputType="textEmailAddress"
+                android:fontFamily="@font/fredoka_variable_font"
+                app:layout_constraintTop_toBottomOf="@id/login" />
+
+            <EditText
+                android:id="@+id/passwordEditText"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="15dp"
+                android:autofillHints="password"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:fontFamily="@font/fredoka_variable_font"
+                android:background="@drawable/bg_edit_text"
+                android:drawableStart="@drawable/lock_ic"
+                android:drawablePadding="5dp"
+                app:layout_constraintTop_toBottomOf="@id/emailEditText" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/loginBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/login"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:onClick="logInUser"
+                android:fontFamily="@font/fredoka_variable_font"
+                android:background="@drawable/bg_btn_theme"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/passwordEditText"/>
+
+
+            <TextView
+                android:id="@+id/signupTxt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/don_t_have_account"
+                android:textColor="@color/white"
+                android:fontFamily="@font/fredoka_variable_font"
+                android:gravity="end"
+                android:layout_marginTop="15dp"
+                app:layout_constraintTop_toBottomOf="@id/loginBtn"
+                app:layout_constraintStart_toStartOf="@id/loginBtn"
+                app:layout_constraintEnd_toStartOf="@id/signupTxtBtn"
+                />
+            <TextView
+                android:id="@+id/signupTxtBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/signup"
+                android:fontFamily="@font/fredoka_variable_font"
+                android:textColor="@android:color/holo_blue_light"
+                android:background="@android:color/transparent"
+                android:onClick="toSignUpPage"
+                app:layout_constraintStart_toEndOf="@id/signupTxt"
+                app:layout_constraintTop_toTopOf="@id/signupTxt"
+                app:layout_constraintEnd_toEndOf="@id/loginBtn"
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -2,10 +2,8 @@ package com.example.dogapi2recycler.view
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.EditText
-import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
@@ -17,11 +15,11 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.dogapi2recycler.R
 import com.example.dogapi2recycler.adapters.ListAdapter
 import com.example.dogapi2recycler.databinding.ActivityListBinding
-import com.example.dogapi2recycler.model.ClickListener
+import com.example.dogapi2recycler.model.DogClickListener
 import com.example.dogapi2recycler.model.Dog
 import com.example.dogapi2recycler.viewmodel.MyViewModel
 
-class ListActivity : AppCompatActivity(), ClickListener {
+class ListActivity : AppCompatActivity(), DogClickListener {
 
     lateinit var bind: ActivityListBinding
     lateinit var adapter: ListAdapter

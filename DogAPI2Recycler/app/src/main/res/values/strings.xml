@@ -37,4 +37,25 @@
     <string name="loyal_brave">Loyal, Brave</string>
     <string name="united_kingdom">United Kingdom</string>
     <string name="hjq8ge5v7">HJQ8ge5V7</string>
+    <string name="woof">Woof!</string>
+    <string name="perfect_pup_in_a_single_search">Perfect pup in a single search</string>
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="signup">Signup</string>
+    <string name="don_t_have_account">Don\'t have an Account-</string>
+    <string name="dog_image_launch">Dog image</string>
+    <string name="already_have_an_account">Already have an Account-</string>
+    <string name="logout_button">logout button</string>
+    <string name="profile_button">profile button</string>
+    <string name="x">X</string>
+    <string name="logout">Logout</string>
+    <string name="login_confirmation">Logout Confirmation</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="are_you_sure">Are You Sure?</string>
+    <string name="add_new_user">Add new User</string>
+    <string name="add_user">Add User</string>
+    <string name="new_user">New User</string>
+    <string name="users">Users</string>
 </resources>

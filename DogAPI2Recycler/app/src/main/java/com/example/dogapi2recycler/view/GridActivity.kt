@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.EditText
-import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
@@ -13,16 +12,14 @@ import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.dogapi2recycler.R
 import com.example.dogapi2recycler.adapters.GridAdapter
 import com.example.dogapi2recycler.databinding.ActivityGridBinding
-import com.example.dogapi2recycler.model.ClickListener
+import com.example.dogapi2recycler.model.DogClickListener
 import com.example.dogapi2recycler.model.Dog
-import com.example.dogapi2recycler.view.ListActivity
 import com.example.dogapi2recycler.viewmodel.MyViewModel
 
-class GridActivity : AppCompatActivity(), ClickListener {
+class GridActivity : AppCompatActivity(), DogClickListener {
     lateinit var bind: ActivityGridBinding
     lateinit var adapter: GridAdapter
     lateinit var searchView: SearchView

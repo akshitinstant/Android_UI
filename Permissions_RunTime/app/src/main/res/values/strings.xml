@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Permissions_RunTime</string>
+    <string name="request_permission">Request Permission\n (Location &amp; SMS)</string>
+    <string name="exact_alarm">Exact Alarm</string>
+    <string name="stop_alarm">Stop Alarm</string>
+</resources>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+<androidx.cardview.widget.CardView
+    android:id="@+id/userCard"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:layout_marginTop="20dp"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="0dp"
+    app:cardBackgroundColor="@android:color/transparent"
+    app:layout_constraintTop_toTopOf="parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_card"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp">
+
+        <TextView
+            android:id="@+id/roundInitial"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_margin="20dp"
+            android:background="@drawable/start_act_btn"
+            android:fontFamily="@font/fredoka_variable_font"
+            android:gravity="center"
+            android:text="@string/x"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/userDetails"
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:layout_margin="15dp"
+    app:layout_constraintStart_toEndOf="@id/roundInitial"
+    app:layout_constraintEnd_toStartOf="@id/activeStatus"
+    >
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="User Name"
+        android:textSize="20sp"
+        android:fontFamily="@font/fredoka_variable_font"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/userEmail"
+        />
+
+        <TextView
+            android:id="@+id/userEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/fredoka_variable_font"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginStart="5dp"
+            app:layout_constraintTop_toBottomOf="@id/userName"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:text="User Email" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/activeStatus"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@drawable/active_status"
+            android:layout_margin="15dp"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@id/userDetails"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

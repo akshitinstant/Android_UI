@@ -45,7 +45,7 @@ class MainActivity : AppCompatActivity() {
 
     class ClickHandlingInnerClass(val context: Context){
 
-        fun onEnrollButtonClick(view : View){
+        fun onEnrollButtonClick(){
             Toast.makeText(context, "Enrolled", Toast.LENGTH_SHORT).show()
         }
         fun onCancelButtonClick(view : View){

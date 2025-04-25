@@ -1,7 +1,5 @@
 package com.example.dogapi2recycler.model
 
-import android.view.View
-
-interface ClickListener {
+interface DogClickListener {
     fun customClickListener(dog: Dog)
 }

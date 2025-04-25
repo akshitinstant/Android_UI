@@ -1,6 +1,9 @@
 package com.example.dogapi2recycler.repository
 
+import android.content.Context
 import androidx.lifecycle.MutableLiveData
+import androidx.room.Room
+import com.example.dogapi2recycler.db.AppDB
 import com.example.dogapi2recycler.model.Dog
 import com.example.dogapi2recycler.model.RetrofitHelper
 import kotlinx.coroutines.CoroutineScope
@@ -32,4 +35,9 @@ class RepoClass {
                 error.value = response.errorBody().toString()
         }
     }
+
+    fun database(context: Context): AppDB{
+        return Room.databaseBuilder(context, AppDB::class.java, "appDB").build()
+    }
+
 }

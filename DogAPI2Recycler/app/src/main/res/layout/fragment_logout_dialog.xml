@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="270dp"
+        android:layout_height="170dp"
+        android:padding="15dp"
+        tools:context=".view.LogoutDialogFragment">
+
+        <TextView
+            android:id="@+id/confirmTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:fontFamily="@font/fredoka_variable_font"
+            android:text="@string/login_confirmation"
+            app:layout_constraintTop_toTopOf="parent"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+<TextView
+    android:id="@+id/confirmMessage"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/are_you_sure"
+    android:textSize="18sp"
+    android:gravity="center"
+    android:layout_margin="10dp"
+    android:textColor="@color/black"
+    android:textStyle="bold"
+    android:fontFamily="@font/fredoka_variable_font"
+    app:layout_constraintTop_toBottomOf="@id/confirmTitle"
+    app:layout_constraintBottom_toTopOf="@id/btnLayout"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    />
+        <LinearLayout
+            android:id="@+id/btnLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/confirmMessage"
+            app:layout_constraintBottom_toBottomOf="parent">
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/noButton"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="@string/no"
+                android:fontFamily="@font/fredoka_variable_font"
+                android:layout_margin="10dp"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:background="@drawable/logout_dialog_btn"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/yesButton"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="@string/yes"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/fredoka_variable_font"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:background="@drawable/logout_dialog_btn"/>
+        </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
