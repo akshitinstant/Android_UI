@@ -49,16 +49,17 @@ class UserListActivity : AppCompatActivity(), UserClickListener {
             initializeAdapter()
         }
     }
-       fun initializeAdapter(){
-           val recyclerView = bind.userRecycler
-           recyclerView.layoutManager = LinearLayoutManager(this)
-           adapter = UserAdapter(this, myVM.userList)
-           recyclerView.adapter = adapter
-        }
 
-        fun back(view:View){
-            startActivity(Intent(this, MainActivity::class.java))
-            finishAffinity()
+    fun initializeAdapter() {
+        val recyclerView = bind.userRecycler
+        recyclerView.layoutManager = LinearLayoutManager(this)
+        adapter = UserAdapter(this, myVM.userList)
+        recyclerView.adapter = adapter
+    }
+
+    fun back(view: View) {
+        startActivity(Intent(this, MainActivity::class.java))
+        finishAffinity()
     }
 
     override fun customClickListener(user: User) {
@@ -67,10 +68,10 @@ class UserListActivity : AppCompatActivity(), UserClickListener {
 //        val email=user.email.toString()
 //        editor.putString("email",email)
 //        editor.apply()
-        val myDialog=ItemDialogLogin()
-            val bundle=Bundle()
-                bundle.putString("email",user.email)
-        myDialog.arguments=bundle
+        val myDialog = ItemDialogLogin()
+        val bundle = Bundle()
+        bundle.putString("email", user.email)
+        myDialog.arguments = bundle
         myDialog.show(supportFragmentManager, "LoginUserDialog")
     }
 

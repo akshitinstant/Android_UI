@@ -8,13 +8,19 @@
     name="myVM"
     type="com.example.dogapi2recycler.viewmodel.MyViewModel" />
     </data>
-
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/main"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:background="@drawable/bg_theme"
-        tools:context=".view.LaunchActivity">
+        tools:context=".view.LaunchActivity"
+        >
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/titleLayout"
@@ -69,7 +75,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.4" />
+            app:layout_constraintGuide_percent="0.42" />
 
         <!--<ScrollView
             android:layout_width="match_parent"
@@ -106,6 +112,8 @@
                 android:layout_height="60dp"
                 android:autofillHints="emailAddress"
                 android:hint="@string/name"
+                android:textColor="@color/white"
+                android:textColorHint="@android:color/darker_gray"
                 android:layout_marginTop="20dp"
                 android:drawableStart="@drawable/person_ic"
                 android:drawablePadding="5dp"
@@ -120,6 +128,8 @@
                 android:layout_height="60dp"
                 android:autofillHints="emailAddress"
                 android:hint="@string/email"
+                android:textColor="@color/white"
+                android:textColorHint="@android:color/darker_gray"
                 android:layout_marginTop="20dp"
                 android:drawableStart="@drawable/mail_ic"
                 android:drawablePadding="5dp"
@@ -135,7 +145,9 @@
                 android:layout_marginTop="15dp"
                 android:autofillHints="password"
                 android:hint="@string/password"
+                android:textColorHint="@android:color/darker_gray"
                 android:inputType="textPassword"
+                android:textColor="@color/white"
                 android:fontFamily="@font/fredoka_variable_font"
                 android:background="@drawable/bg_edit_text"
                 android:drawableStart="@drawable/lock_ic"
@@ -215,7 +227,9 @@
                 android:drawableStart="@drawable/mail_ic"
                 android:drawablePadding="5dp"
                 android:background="@drawable/bg_edit_text"
+                android:textColor="@color/white"
                 android:inputType="textEmailAddress"
+                android:textColorHint="@android:color/darker_gray"
                 android:fontFamily="@font/fredoka_variable_font"
                 app:layout_constraintTop_toBottomOf="@id/login" />
 
@@ -227,6 +241,8 @@
                 android:autofillHints="password"
                 android:hint="@string/password"
                 android:inputType="textPassword"
+                android:textColor="@color/white"
+                android:textColorHint="@android:color/darker_gray"
                 android:fontFamily="@font/fredoka_variable_font"
                 android:background="@drawable/bg_edit_text"
                 android:drawableStart="@drawable/lock_ic"
@@ -279,4 +295,5 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 </layout>

@@ -2,6 +2,7 @@ package com.example.dogapi2recycler.view
 
 import android.content.Intent
 import android.content.SharedPreferences
+import android.graphics.Rect
 import android.os.Bundle
 import android.service.voice.VisibleActivityInfo
 import android.util.Log
@@ -42,6 +43,22 @@ class LaunchActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+       /* val scrollView=bind.scrollView
+        val signUpBtn=bind.signupBtn
+
+        scrollView.viewTreeObserver.addOnGlobalLayoutListener {
+            val rect= Rect()
+            scrollView.getWindowVisibleDisplayFrame(rect)
+            val screenHeight = scrollView.rootView.height
+            val keyboardHeight = screenHeight-rect.bottom
+            scrollView.setPadding(0, 0, 0, keyboardHeight)
+//            if(keyboardHeight>0){       //keyboard-visible
+//                scrollView.scrollTo(0,signUpBtn.bottom)
+//            } else {        //keyboard-hidden
+//                scrollView.scrollTo(0,0)
+//            }
+        }*/
 
         db = myVM.getDB(this)
 

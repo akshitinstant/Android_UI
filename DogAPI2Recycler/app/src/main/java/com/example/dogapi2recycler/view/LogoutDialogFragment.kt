@@ -48,14 +48,14 @@ class LogoutDialogFragment : DialogFragment() {
                 myVM.getDB(activity).userDAO().updateActiveStatus(email, false)
             }
             pref.edit().clear().apply()
-            activity.startActivity(Intent(activity, LaunchActivity::class.java))
+            activity.startActivity(Intent(activity, LaunchActivity::class.java).putExtra("emailAddress",email))
             activity.finishAffinity()
         }
 
         bind.noButton.setOnClickListener {
-//            lifecycleScope.launch(Dispatchers.IO) {
-//                myVM.getDB(activity).userDAO().deleteUserWithName("GHGH")
-//            }
+            lifecycleScope.launch(Dispatchers.IO) {
+                myVM.getDB(activity).userDAO().deleteUserWithName("ADAM")
+            }
             dismiss()
         }
     }

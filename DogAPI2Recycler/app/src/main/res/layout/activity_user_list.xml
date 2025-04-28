@@ -18,27 +18,26 @@
             android:id="@+id/backBtn"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_marginStart="5dp"
             android:contentDescription="@string/button_for_list"
             android:src="@drawable/back_btn"
             android:onClick="back"
-            android:layout_margin="15dp"
+            android:layout_marginStart="15dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toTopOf="@id/guide"/>
 
         <TextView
             android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="15dp"
+            android:layout_marginStart="15dp"
             android:text="@string/users"
+            android:drawableEnd="@drawable/user_group_ic"
+            android:drawablePadding="10dp"
             android:fontFamily="@font/fredoka_variable_font"
             android:textColor="@color/white"
-            android:textSize="25sp"
+            android:textSize="28sp"
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@id/backBtn"
-            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toTopOf="@id/guide"/>
 
         <androidx.constraintlayout.widget.Guideline
@@ -46,7 +45,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.12" />
+            app:layout_constraintGuide_percent="0.07" />
 
 
         <androidx.recyclerview.widget.RecyclerView

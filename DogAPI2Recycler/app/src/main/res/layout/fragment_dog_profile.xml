@@ -17,24 +17,32 @@
 
         <ImageView
             android:id="@+id/backBtn"
-            android:layout_width="20dp"
-            android:layout_height="23dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:contentDescription="@string/back_navigation_button"
             android:src="@drawable/back_btn"
-            app:layout_constraintBottom_toBottomOf="@+id/title"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/title" />
+            app:layout_constraintBottom_toTopOf="@+id/guide"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/details"
-            android:textSize="25sp"
+            android:textSize="28sp"
+            android:fontFamily="@font/fredoka_variable_font"
+            android:layout_marginStart="5dp"
             android:textColor="@color/white"
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@id/backBtn"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintBottom_toTopOf="@+id/guide" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.05" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/intro"
@@ -76,6 +84,8 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
                     android:text="@string/breed_group"
+                    android:fontFamily="@font/fredoka_variable_font"
+                    android:textStyle="bold"
                     android:textSize="20sp"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -85,6 +95,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
                     android:text="@string/life_span"
+                    android:fontFamily="@font/fredoka_variable_font"
                     android:textSize="17sp"
                     app:layout_constraintTop_toBottomOf="@id/breed" />
 
@@ -95,9 +106,10 @@
                 android:layout_height="wrap_content"
                 android:text="@string/name"
                 android:padding="3dp"
+                android:layout_margin="5dp"
                 android:textColor="@color/white"
+                android:fontFamily="@font/poetsen_one_regular"
                 android:textSize="25sp"
-                android:textStyle="bold"
                 app:layout_constraintTop_toBottomOf="@id/imgCard" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 <View
@@ -118,6 +130,7 @@
             android:text="@string/more_information"
             android:textSize="21sp"
             android:textStyle="bold"
+            android:fontFamily="@font/fredoka_variable_font"
             app:layout_constraintTop_toBottomOf="@id/partition" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -135,7 +148,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_begin="130dp" />
+                app:layout_constraintGuide_percent="0.5" />
 
             <TextView
                 android:id="@+id/originTitle"
@@ -143,7 +156,8 @@
                 android:layout_height="wrap_content"
                 android:text="@string/origin"
                 android:textColor="@color/white"
-                android:textSize="17sp"
+                android:fontFamily="@font/fredoka_variable_font"
+                android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -153,7 +167,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="@string/Origin"
-                android:textSize="17sp"
+                android:fontFamily="@font/fredoka_variable_font"
+                android:textSize="18sp"
                 android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/originTitle"
@@ -165,7 +180,8 @@
                 android:textColor="@color/white"
                 android:layout_height="wrap_content"
                 android:text="@string/height"
-                android:textSize="17sp"
+                android:fontFamily="@font/fredoka_variable_font"
+                android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/guideline"
@@ -176,7 +192,8 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
                 android:text="@string/Height"
-                android:textSize="17sp"
+                android:fontFamily="@font/fredoka_variable_font"
+                android:textSize="18sp"
                 android:layout_marginTop="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/guideline"
@@ -188,7 +205,8 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
                 android:text="@string/weight"
-                android:textSize="17sp"
+                android:fontFamily="@font/fredoka_variable_font"
+                android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/guideline"
@@ -199,7 +217,8 @@
                 android:textColor="@color/white"
                 android:layout_height="wrap_content"
                 android:text="@string/Weight"
-                android:textSize="17sp"
+                android:fontFamily="@font/fredoka_variable_font"
+                android:textSize="18sp"
                 android:layout_marginTop="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/guideline"
@@ -211,7 +230,8 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
                 android:text="@string/breed_for"
-                android:textSize="17sp"
+                android:fontFamily="@font/fredoka_variable_font"
+                android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/guideline"
@@ -222,7 +242,8 @@
                 android:layout_height="wrap_content"
                 android:text="@string/Breed_for"
                 android:textColor="@color/white"
-                android:textSize="17sp"
+                android:fontFamily="@font/fredoka_variable_font"
+                android:textSize="18sp"
                 android:layout_marginTop="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/guideline"
@@ -234,7 +255,8 @@
                 android:textColor="@color/white"
                 android:layout_height="wrap_content"
                 android:text="@string/temperament"
-                android:textSize="17sp"
+                android:fontFamily="@font/fredoka_variable_font"
+                android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/guideline"
@@ -244,7 +266,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="@string/Temperament"
-                android:textSize="17sp"
+                android:fontFamily="@font/fredoka_variable_font"
+                android:textSize="18sp"
                 android:textColor="@color/white"
                 android:layout_marginTop="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
