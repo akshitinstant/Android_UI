@@ -6,29 +6,53 @@ import android.app.NotificationManager
 import android.app.PendingIntent
 import android.app.Service
 import android.content.Intent
+import android.os.Binder
 import android.os.IBinder
 import android.util.Log
 import androidx.core.app.NotificationCompat
 import androidx.core.content.ContextCompat
-import kotlin.concurrent.thread
+import org.greenrobot.eventbus.EventBus
+import java.util.Random
+
 
 class DemoService : Service() {
+
+    private val binder = LocalBinder()
+    private val random = Random()
+
+    inner class LocalBinder : Binder() {
+        fun getServices(): DemoService = this@DemoService
+    }
+
+    override fun onBind(intent: Intent?): IBinder? {
+        return binder
+    }
+
+    fun getRandomNumber(): Int {
+        return random.nextInt(100)
+    }
 
     override fun onCreate() {
         super.onCreate()
         Log.d("ser6", "onCreate()")
     }
 
-
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         Log.d("ser6", "onStartCommand()")
 
-        thread(start = true) {
-            while (true) {
-                Log.d("ser6", "Loading Message")
-                Thread.sleep(1000)
-            }
-        }
+//        thread(start = true) {
+//            while (true) {
+//                Log.d("ser6", "Loading Message")
+//                Thread.sleep(1000)
+//            }
+//        }
+
+
+//  Event Bus
+        val downloadedFileName = "file.jpg"
+        EventBus.getDefault().post(DownloadCompleteEvent(downloadedFileName))
+
+//  Foreground Services
         startLoggerForegroundService()
         return super.onStartCommand(intent, flags, startId)
     }
@@ -68,7 +92,4 @@ class DemoService : Service() {
         Log.d("ser6", "onDestroy()")
     }
 
-    override fun onBind(intent: Intent?): IBinder? {
-        return null
-    }
 }

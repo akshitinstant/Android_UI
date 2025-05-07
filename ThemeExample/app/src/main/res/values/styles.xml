@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="SecondTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- Primary color for your app (action bar, etc.) -->
+        <item name="colorPrimary">#2196F3</item>
+
+        <!-- Variant of primary color -->
+        <item name="colorPrimaryVariant">#1976D2</item>
+
+        <!-- Accent color for widgets like buttons -->
+        <item name="colorAccent">#FF5722</item>
+
+        <!-- Background color for your activity -->
+        <item name="android:windowBackground">#E0E0E0</item>
+
+        <!-- Text color -->
+        <item name="android:textColorPrimary">#000000</item>
+    </style>
+</resources>

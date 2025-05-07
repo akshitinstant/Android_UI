@@ -27,7 +27,7 @@ class RepoClass {
     fun getList() {
         coroutineScope.launch {
             val response = withContext(Dispatchers.IO) {
-                RetrofitHelper.createRetrofit(baseURL()).getDogs(limit = 20)
+               RetrofitHelper.createRetrofit(baseURL()).getDogs(limit = 20)
             }
             if (response.isSuccessful)
                 dogList.value = response.body()

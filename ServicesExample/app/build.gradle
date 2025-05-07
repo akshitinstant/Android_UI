@@ -46,4 +46,8 @@ dependencies {
     testImplementation libs.junit
     androidTestImplementation libs.androidx.junit
     androidTestImplementation libs.androidx.espresso.core
+    implementation 'org.greenrobot:eventbus:3.3.1'
+    implementation 'com.josesamuel:remoter-annotations:1.0.3'
+    annotationProcessor 'com.josesamuel:remoter:1.0.3'
+
 }
