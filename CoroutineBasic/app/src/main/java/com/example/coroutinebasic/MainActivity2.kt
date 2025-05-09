@@ -106,5 +106,4 @@ class MainActivity2 : AppCompatActivity() {
         startActivity(Intent(this, MainActivity3::class.java))
     }
 
-
 }

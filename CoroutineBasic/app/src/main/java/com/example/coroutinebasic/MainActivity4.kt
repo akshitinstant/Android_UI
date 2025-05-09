@@ -1,8 +1,11 @@
+// Exception handling using try-Catch and CoroutineExceptionHandler
+
 package com.example.coroutinebasic
 
 import ViewModel.MyViewModel
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
@@ -16,6 +19,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.supervisorScope
 
 class MainActivity4 : AppCompatActivity() {
@@ -34,6 +38,30 @@ class MainActivity4 : AppCompatActivity() {
         val myViewModel = ViewModelProvider(this)[MyViewModel::class.java]
 
 
-    }
+        val exceptionHandler = CoroutineExceptionHandler { _, exception ->
+            println("CoroutineExceptionHandler caught: ${exception.message}")
+        }
 
+        val coroutine = CoroutineScope(Dispatchers.Default + exceptionHandler)
+
+        coroutine.launch{
+            println("Starting coroutine...")
+            throw RuntimeException("Aaaaa! Got an Exception")
+        }
+        Thread.sleep(1000)
+        println("App is still running!")
+
+
+//        val coroutine=CoroutineScope(Dispatchers.Default)
+//        coroutine.launch{
+//            try {
+//                println("Starting coroutine...")
+//                throw RuntimeException("Aaaaa! Got an Exception")
+//            } catch(e:Exception){
+//                println("Caught inside try-catch: ${e.message}")
+//            }
+//        }
+//        Thread.sleep(1000)
+//        println("App is still running!")
+    }
 }
